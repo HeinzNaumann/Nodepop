@@ -20,12 +20,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public/images')));
 
 /**
  * Rutas de mi API
  */
 
-app.use('/api/anuncios', require('./routes/api/anuncios'));
+app.use('/apiv1/anuncios', require('./routes/apiv1/anuncios'));
+app.use('/apiv1/tags', require('./routes/apiv1/tags'));
 
 /**
  * Rutas de mi website

@@ -4,7 +4,7 @@
       "nombre": "Bicicleta",
       "venta": true,
       "precio": 230.15,
-      "foto": "bici.jpg",
+      "foto": "bici.png",
       "tags": [
         "lifestyle",
         "motor"
@@ -13,8 +13,28 @@
     {
       "nombre": "iPhone 3GS",
       "venta": false,
-      "precio": 50.00,
-      "foto": "iphone.png",
+      "precio": 20.00,
+      "foto": "iphone.jpg",
+      "tags": [
+        "lifestyle",
+        "mobile"
+      ]
+    },
+    {
+      "nombre": "Oculus Rift",
+      "venta": false,
+      "precio": 190.00,
+      "foto": "oculus.jpg",
+      "tags": [
+        "lifestyle",
+        "mobile"
+      ]
+    },
+    {
+      "nombre": "Monitor Benq",
+      "venta": false,
+      "precio": 190.00,
+      "foto": "monitor.jpg",
       "tags": [
         "lifestyle",
         "mobile"
