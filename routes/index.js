@@ -49,4 +49,20 @@ router.get('/', async function (req, res, next) {
 
 });
 
+
+router.post('/', async (req, res, next) => {
+  try {
+    const anuncioData = req.body;
+
+    const anuncio = new Anuncio(anuncioData); // creo un objeto de tipo Anuncio EN MEMORIA
+
+    const anuncioCreado = await anuncio.save();
+
+    res.status(201).json({ result: anuncioCreado });
+
+  } catch (err) {
+    next(err);
+  }
+});
+
 module.exports = router;
