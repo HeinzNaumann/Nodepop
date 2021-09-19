@@ -51,6 +51,21 @@ router.get('/', async (req, res, next) => {
     }
 });
 
+
+// Devuelve una lista de tags 
+router.get('/tags', async (req, res, next) => {
+    try {
+        const articulo = await Articulo.find()
+        let listaTags = []
+        res.json({ listaTags })
+    } catch (err) {
+        next(err);
+    }
+
+})
+
+//Crea un anuncio
+
 router.post('/', async (req, res, next) => {
     try {
         const anuncioData = req.body;
