@@ -23,6 +23,12 @@ img.carruselProductos {
   object-fit: cover;
 }
 
+.idiomas {
+  text-transform: uppercase;
+  margin-left: 30%;
+  font-weight: 700;
+}
+
 h1,
 h2,
 h3,

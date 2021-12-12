@@ -61,6 +61,11 @@
               >
                 <span class="navbar-toggler-icon"></span>
               </button>
+              <div class="idiomas">
+                <% getLocales().forEach(locale => { %>
+                <a href="/change-locale/<%= locale %>"> <%= locale %></a>
+                &nbsp; <% }) %>
+              </div>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto main-nav">
                   <li class="nav-item active">
@@ -71,6 +76,7 @@
                       ><%= __("Features") %><span><i class="fa"></i></span>
                     </a>
                   </li>
+
                   <% if(session.usuarioLogueado){ %>
                   <li class="nav-item dropdown dropdown-slide">
                     <a class="nav-link dropdown-toggle" href="privado">
@@ -78,9 +84,6 @@
                     </a>
                   </li>
 
-                  <% getLocales().forEach(locale => { %>
-                  <a href="/change-locale/<%= locale %>"> <%= locale %></a>
-                  &nbsp; <% }) %>
                   <li class="nav-item dropdown dropdown-slide">
                     <a class="nav-link text-white btn-danger" href="logout">
                       <%= __("Logout") %> <span><i class="fa"></i></span>
