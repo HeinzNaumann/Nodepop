@@ -1,35 +1,111 @@
-<!DOCTYPE html>
-<html>
+<% include header.html %>
+<!--===============================
+=            Hero Area            =
+================================-->
 
-<head>
+<section class="hero-area bg-1 text-center overly">
+  <!-- Container Start -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Header Contetnt -->
+        <div class="content-block">
+          <h1><%= __("Welcome to") %> NodePop</h1>
+          <h1><%= __("Buy & Sell Near You") %></h1>
+          <p>
+            <%= __("Join the millions who buy and sell from each other") %><br />
+            <%= __("everyday in local communities around the world") %>
+          </p>
+          <div class="short-popular-category-list text-center">
+            <h2>Popular Category</h2>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="category.html"><i class="fa fa-bed"></i> Hotel</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="category.html"><i class="fa fa-grav"></i> Fitness</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="category.html"><i class="fa fa-car"></i> Cars</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="category.html"
+                  ><i class="fa fa-cutlery"></i> Restaurants</a
+                >
+              </li>
+              <li class="list-inline-item">
+                <a href="category.html"><i class="fa fa-coffee"></i> Cafe</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Advance Search -->
+      </div>
+    </div>
+  </div>
+  <!-- Container End -->
+</section>
 
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
+<div class="product-grid-list">
+  <div class="row mt-20">
+    <% anuncios.forEach( anuncio => { %>
+    <div class="col-sm-12 col-lg-4 col-md-6">
+      <div class="product-item bg-light">
+        <div class="card">
+          <div class="thumb-content">
+            <!-- <div class="price">$200</div> -->
 
-<body>
+            <a href="single.html">
+              <img
+                class="carruselProductos"
+                src="<%= anuncio.foto %>"
+                alt="Card image cap"
+              />
+            </a>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="single.html"><%= anuncio.nombre %></a>
+            </h4>
+            <ul class="list-inline product-meta">
+              <li class="list-inline-item">
+                <a href="single.html"
+                  ><i class="fa fa-folder-open-o"></i><%= anuncio.tags %></a
+                >
+              </li>
+              <li class="list-inline-item">
+                <a href="#"
+                  ><i class="fa fa-money"></i><%= anuncio.precio %>€</a
+                >
+              </li>
+            </ul>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Explicabo, aliquam!
+            </p>
+            <div class="product-ratings">
+              <ul class="list-inline">
+                <li class="list-inline-item selected">
+                  <i class="fa fa-star"></i>
+                </li>
+                <li class="list-inline-item selected">
+                  <i class="fa fa-star"></i>
+                </li>
+                <li class="list-inline-item selected">
+                  <i class="fa fa-star"></i>
+                </li>
+                <li class="list-inline-item selected">
+                  <i class="fa fa-star"></i>
+                </li>
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>
 
-
-  <p>
-    <ul>
-      <% anuncios.forEach( anuncio => { %>
-      <li>
-        El articulo <%= anuncio.nombre %> tiene un precio de <%= anuncio.precio %> €.
-
-
-      </li>
-      <li>
-        <%= anuncio.tags %>
-      </li>
-      <li>
-
-        <img src="/images/<%= anuncio.foto %>">
-      </li>
-
-
-      <% }) %>
-    </ul>
-  </p>
-
-</body>
-
-</html>
+<% include footer.html %>

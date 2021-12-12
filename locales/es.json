@@ -1,0 +1,22 @@
+{
+	"Welcome to": "Bienvenido a ",
+	"Welcome to NodeApi": "Welcome to NodeApi",
+	"i18n example for plurals": "i18n example for plurals",
+	"Mouse": {
+		"one": "Ratón",
+		"other": "Ratones"
+	},
+	"title": "titulo",
+	"Buy & Sell Near You": "Vende y compra cerca de ti",
+	"Join the millions who buy and sell from each other": "Unete a las millones de personas que quieren comprar y vender",
+	"everyday in local communities around the world": "Cada dia en la comunidades alrededor del mundo",
+	"Home": "Inicio",
+	"Features": "Precios",
+	"Listing": "Listado",
+	"Login Now": "Acceder",
+	"Login": "Acceder",
+	"Invalid credential": "Invalid credential",
+	"private": "private",
+	"logout": "logout",
+	"Logout": "Logout"
+}
