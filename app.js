@@ -62,7 +62,7 @@ app.use(
       maxAge: 1000 * 60 * 60 * 24 * 2, // dos dias de inactividad
     },
     store: MongoStore.create({
-      mongoUrl: process.env.MONGODB_CONNECTION_STRING,
+      mongoUrl: process.env.MONGODB_CONNECTION_STRING || 'MongoDB://localhost:27017/dev',
     }),
   }),
 );
