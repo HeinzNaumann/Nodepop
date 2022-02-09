@@ -4,11 +4,11 @@
 
 ## Dominios donde esta alojados tanto el front como el back end para la practica Configuracion de servidores y despliegue de aplicaciones
 
-# Front End - React 
+## Front End - React 
 
 http://34.201.252.145/
 
-# Back-End Node
+## Back-End Node
 
 node.heinznaumann.com
 
